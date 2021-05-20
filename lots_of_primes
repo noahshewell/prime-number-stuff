@@ -2,6 +2,7 @@ package com.company;
 /**
  * @author Noah Shewell
  * @version 2.5
+ * This is complete dogshit, recursion is better to use
  */
 
 public class Main {
