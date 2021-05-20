@@ -1,7 +1,7 @@
 package com.company;
 /**
  * @author Noah Shewell
- * @version 2.4
+ * @version 2.5
  */
 
 public class Main {
@@ -17,14 +17,9 @@ public class Main {
     }
     public static void main(String[] args) {
         long time = System.currentTimeMillis();
-        int arrayLength = 1000000;
-        int[] numbers = new int[arrayLength];
-        for (int i = 0; i < arrayLength; i++) {
-            numbers[i] = i;
-        } // fills with numbers
-        for (int i : numbers) {
+        for (int i = 0; i < 1000000; i++) {
             if (isPrime(i)) System.out.println(i);
-        }  //checks if number is prime
+        }
         System.out.print("Time: ");
         System.out.println(System.currentTimeMillis() - time);
     }
