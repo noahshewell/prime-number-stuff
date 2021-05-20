@@ -1,24 +1,23 @@
 package com.company;
-
 /**
  * @author Noah Shewell
  * @version 2.4
  */
+
 public class Main {
     public static boolean isPrime(int num) {
         if (num <= 1) return false; //initial check
-        //if (num != 2 && num % 2 == 0) return false; //cuts the amount of numbers you have to check in half, i dont think its needed/helps at all
-        for (int h = 2; h < num / 2 - 1; h++) { //goes through half of the numbers
+        if (num != 2 && num % 2  == 0) return false; //cuts the amount of numbers you have to check in half
+        for (int h = 3; h < num / 2 ; h+=2) { //goes through half of the numbers, at increments of two because you cut all the evens out
             if (num % h == 0) { // if the number is divisible by any of those numbers its not prime
                 return false;
             }
         }
         return true; //if its not divisible by any of those numbers its prime
     }
-
     public static void main(String[] args) {
         long time = System.currentTimeMillis();
-        int arrayLength = 100000;
+        int arrayLength = 1000000;
         int[] numbers = new int[arrayLength];
         for (int i = 0; i < arrayLength; i++) {
             numbers[i] = i;
